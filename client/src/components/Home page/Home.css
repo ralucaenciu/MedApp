@@ -1,0 +1,786 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
+
+/* :root {
+  --green: #16a085;
+  --black: rgb(245, 185, 56);
+  --light-color: rgb(31, 28, 28);
+  --bg-color: rgb(255, 255, 255);
+  --border: 0.1rem solid rgba(24, 1, 1, 0.377);
+  --box-shadow: 0.4rem 0.4rem 1rem rgba(0, 0, 0, 0.363),
+    -0.4rem -0.4rem 1rem rgb(20, 19, 19);
+  --box-shadow-inset: 0.4rem 0.4rem 1rem rgba(22, 160, 133, 0.2) inset,
+    -0.4rem -0.4rem 1rem rgb(17, 16, 16) inset;
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: 0.2s linear;
+} */
+
+:root {
+    --green: #16a085;
+    --black: #444;
+    --light-color: #777;
+    --bg-color: rgb(255, 255, 255);
+    --box-shadow: 0.5rem 0.5rem 0 rgba(22, 160, 133, 0.2);
+    --text-shadow: 0.4rem 0.4rem 0 rgba(0, 0, 0, 0.2);
+    --border: 0.2rem solid var(--green);
+}
+
+
+/* :root {
+  --green: #27ae60;
+  --black: #444;
+  --light-color: #777;
+  --bg-color: #e6e6e6;
+  --border: 0.1rem solid rgba(0, 0, 0, 0.2);
+  --box-shadow: 0.4rem 0.4rem 1rem #ccc, -0.4rem -0.4rem 1rem #fff;
+  --box-shadow-inset: 0.4rem 0.4rem 1rem #ccc inset,
+    -0.4rem -0.4rem 1rem #fff inset;
+} */
+
+
+/* .text_div{
+  border: #111 solid 1.5px;
+  width: 100%;
+  margin: 10px;
+} */
+
+textarea {
+    margin: 10px;
+    border: #111 solid 2px;
+    width: 70%;
+    /* resize:none; */
+    padding-left: auto;
+    padding-right: auto;
+    resize: vertical
+    /* height: 100%; */
+}
+
+.highlight {
+    color: green;
+}
+
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-transform:initial;
+    transition: all 0.2s ease-out;
+    text-decoration: none;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.homePad {
+    padding-left: 30rem;
+}
+
+body {
+    background: var(--bg-color);
+}
+
+body.active {
+    --black: #fff;
+    --light-color: #ddd;
+    --bg-color: #222;
+    --border: 0.1rem solid rgba(0, 0, 0, 0.4);
+    --box-shadow: 0.4rem 0.4rem 1rem rgb(221, 28, 28), -0.4rem -0.4rem 1rem #333;
+    --box-shadow-inset: 0.4rem 0.4rem 1rem #111 inset, -0.4rem -0.4rem 1rem #333 inset;
+}
+
+section {
+    /* min-height: 100vh; */
+    padding: 2rem;
+}
+
+
+/* .btn {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 3.5rem;
+  border-radius: 0.5rem;
+  font-size: 1.7rem;
+  cursor: pointer;
+  background: none;
+  color: var(--black);
+  box-shadow: var(--box-shadow);
+} */
+
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem;
+    padding-left: 1rem;
+    border: var(--border);
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shadow);
+    color: var(--green);
+    cursor: pointer;
+    font-size: 1.7rem;
+    background: #fff;
+}
+
+.btn span {
+    padding: 0.7rem 1rem;
+    border-radius: 0.5rem;
+    background: var(--green);
+    color: #fff;
+    margin-left: 0.5rem;
+}
+
+.btn:hover {
+    background: var(--green);
+    color: #fff;
+}
+
+.btn:hover span {
+    color: var(--green);
+    background: #fff;
+    margin-left: 1rem;
+}
+
+
+/* .btn:hover {
+  box-shadow: var(--box-shadow-inset);
+  color: var(--green);
+} */
+
+.heading {
+    text-align: center;
+    font-size: 5rem;
+    color: var(--black);
+    text-transform: uppercase;
+    padding: 2rem;
+}
+
+.heading span {
+    color: var(--green);
+    text-transform: uppercase;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background: var(--bg-color);
+    width: 30rem;
+    border-right: var(--border);
+    height: 100%;
+    padding: 2rem;
+    text-align: center;
+}
+
+.header .user img {
+    margin: 1rem 0;
+    border: 1rem solid transparent;
+    border-radius: 50%;
+    height: 18rem;
+    width: 18rem;
+    box-shadow: var(--box-shadow);
+}
+
+h3 {
+    font-size: 2.5rem;
+}
+
+.header .user h3 {
+    color: var(--black);
+    font-size: 2.5rem;
+}
+
+.header .user p {
+    color: var(--green);
+    font-size: 1.5rem;
+}
+
+.header .navbar {
+    padding-top: 1rem;
+}
+
+.header .navbar a {
+    display: block;
+    height: 35px;
+    margin: 1.5rem 0;
+    padding: 0.7rem;
+    border-radius: 5rem;
+    font-size: 2rem;
+    box-shadow: var(--box-shadow);
+    color: var(--black);
+}
+
+.header .navbar a:hover {
+    box-shadow: var(--box-shadow-inset);
+    color: var(--green);
+}
+
+#menu-btn {
+    position: fixed;
+    top: 1.5rem;
+    left: 2rem;
+    z-index: 1000;
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    border-radius: 50%;
+    font-size: 2rem;
+    cursor: pointer;
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    color: var(--black);
+    background: var(--bg-color);
+    display: none;
+}
+
+#menu-btn:hover {
+    color: var(--green);
+    box-shadow: var(--box-shadow-inset);
+}
+
+#theme-toggler {
+    position: fixed;
+    top: 1.5rem;
+    right: 2rem;
+    z-index: 1000;
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    border-radius: 50%;
+    font-size: 2rem;
+    cursor: pointer;
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    color: var(--black);
+    background: var(--bg-color);
+}
+
+#theme-toggler:hover {
+    color: var(--green);
+    box-shadow: var(--box-shadow-inset);
+}
+
+.services .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+    gap: 2rem;
+}
+
+.services .box-container .box {
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shadow);
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.services .box-container .box i {
+    font-size: 4rem;
+    padding-bottom: 5rem;
+    color: #fff;
+}
+
+.services .box-container .box h3 {
+    font-size: 2rem;
+    padding-bottom: 1rem;
+    color: var(--black);
+}
+
+.services .box-container .box p {
+    font-size: 1.4rem;
+    line-height: 1.8;
+    color: var(--light-color);
+}
+
+.services .box-container .box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: var(--green);
+    z-index: -1;
+    clip-path: circle(9rem at 5% 0%);
+    transition: 0.3s linear;
+}
+
+.services .box-container .box:hover::before {
+    clip-path: circle(100%);
+}
+
+.services .box-container .box:hover>* {
+    color: #fff;
+}
+
+.portfolio .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+    gap: 2rem;
+}
+
+.portfolio .box-container .box {
+    /* height: 25rem; */
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    position: relative;
+    border: 1rem solid transparent;
+}
+
+.portfolio .box-container .box img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.portfolio .box-container .box .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: var(--bg-color);
+    display: grid;
+    place-items: center;
+    transform: scale(0);
+}
+
+.portfolio .box-container .box:hover .content {
+    transform: scale(1);
+}
+
+.portfolio .box-container .box .content h3 {
+    font-size: 2.5rem;
+    color: var(--black);
+    text-transform: uppercase;
+    transform: translateY(-5rem);
+    opacity: 0;
+    transition-delay: 0.3s;
+}
+
+.portfolio .box-container .box:hover .content h3 {
+    transform: translateY(0rem);
+    opacity: 1;
+}
+
+
+/* media queries  */
+
+@media (max-width: 991px) {
+    html {
+        font-size: 55%;
+    }
+    body {
+        padding-left: 0;
+    }
+    .header {
+        left: -110%;
+    }
+    .header.active {
+        left: 0%;
+        transition: 0.4s linear;
+    }
+    #menu-btn {
+        display: initial;
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+    .header {
+        width: 100%;
+        border-right: 0;
+    }
+}
+
+
+/* aici vine alt site */
+
+.doctors .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 2rem;
+}
+
+.doctors .box-container .box {
+    text-align: center;
+    background: #fff;
+    border-radius: 0.5rem;
+    border: var(--border);
+    box-shadow: var(--box-shadow);
+    padding: 2rem;
+}
+
+.doctors .box-container .box img {
+    height: 20rem;
+    border: var(--border);
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.doctors .box-container .box h3 {
+    color: var(--black);
+    font-size: 2.5rem;
+}
+
+.doctors .box-container .box span {
+    color: var(--green);
+    font-size: 1.5rem;
+}
+
+.doctors .box-container .box .share {
+    padding-top: 2rem;
+}
+
+.doctors .box-container .box .share a {
+    height: 5rem;
+    width: 5rem;
+    line-height: 4.5rem;
+    font-size: 2rem;
+    color: var(--green);
+    border-radius: 0.5rem;
+    border: var(--border);
+    margin: 0.3rem;
+}
+
+.doctors .box-container .box .share a:hover {
+    background: var(--green);
+    color: #fff;
+    box-shadow: var(--box-shadow);
+}
+
+.book .row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.book .row .image {
+    flex: 1 1 45rem;
+}
+
+.book .row .image img {
+    width: 100%;
+}
+
+.book .row form {
+    flex: 1 1 45rem;
+    background: #fff;
+    border: var(--border);
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    padding: 2rem;
+    border-radius: 0.5rem;
+}
+
+.profile_form {
+    width: 48%;
+}
+
+.book .row form h3 {
+    color: var(--black);
+    padding-bottom: 1rem;
+    font-size: 3rem;
+}
+
+.book .row form .box {
+    width: 100%;
+    margin: 0.7rem 0;
+    border-radius: 0.5rem;
+    border: var(--border);
+    font-size: 1.6rem;
+    color: var(--black);
+    text-transform: none;
+    padding: 1rem;
+}
+
+.book .row form .btn {
+    padding: 1rem 4rem;
+}
+
+.blogs .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 2rem;
+}
+
+.blogs .box-container .box  {
+    border: var(--border);
+    box-shadow: var(--box-shadow);
+    border-radius: 0.5rem;
+    padding: 2rem;
+}
+
+.blogs .box-container .box .image {
+    height: 20rem;
+    overflow: hidden;
+    border-radius: 0.5rem;
+}
+
+.blogs .box-container .box .image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.blogs .box-container .box:hover .image img {
+    transform: scale(1.2);
+}
+
+.blogs .box-container .box .content {
+    padding-top: 1rem;
+}
+
+.blogs .box-container .box .content .icon {
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.blogs .box-container .box .content .icon a {
+    font-size: 1.4rem;
+    color: var(--light-color);
+}
+
+.blogs .box-container .box .content .icon a:hover {
+    color: var(--green);
+}
+
+.blogs .box-container .box .content .icon a i {
+    padding-right: 0.5rem;
+    color: var(--green);
+}
+
+.blogs .box-container .box .content h3 {
+    color: var(--black);
+    font-size: 3rem;
+}
+
+.blogs .box-container .box .content p {
+    color: var(--light-color);
+    font-size: 1.5rem;
+    line-height: 1.8;
+    padding: 1rem 0;
+}
+
+
+/* GLOBAL STYLES */
+
+
+/* body {
+  background: #333;
+  padding-top: 5em;
+  display: flex;
+  justify-content: center;
+} */
+
+
+/* DEMO-SPECIFIC STYLES */
+
+.typewriter h1 {
+    color: black;
+    font-family: monospace;
+    overflow: hidden;
+    /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange;
+    /* The typwriter cursor */
+    white-space: nowrap;
+    /* Keeps the content on a single line */
+    margin: 0 auto;
+    /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em;
+    /* Adjust as needed */
+    animation: typing 3.5s steps(30, end), blink-caret .5s step-end infinite;
+}
+
+
+/* The typing effect */
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+    to {
+        width: 100%
+    }
+}
+
+
+/* The typewriter cursor effect */
+
+@keyframes blink-caret {
+    from,
+    to {
+        border-color: transparent
+    }
+    50% {
+        border-color: orange
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* Style the input container */
+
+.input-container {
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px;
+    border: #111 solid 2px;
+}
+
+
+/* Style the form icons */
+
+.icon {
+    padding: 20px;
+    background-color: var(--black);
+    color: var(--green);
+    min-width: 50px;
+    border-right: #111 2px solid;
+    text-align: center;
+}
+
+
+/* Style the input fields */
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+}
+
+.input-field:focus {
+    border: 2px solid dodgerblue;
+}
+
+.customStyles {
+    top: '50%';
+    left: '50%';
+    right: 'auto';
+    bottom: 'auto';
+    margin-right: '-50%';
+    transform: 'translate(-50%, -50%)';
+}
+
+.styled-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    border-radius: 25px;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.styled-table thead tr {
+    
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+    
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+    
+}
+table {
+    border-collapse:separate;
+    border-radius:25px;
+}
+
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid darkcyan;
+}
+
+.styled-table tbody tr.active-row {
+    font-weight: bold;
+    background: darkcyan;
+
+}
+
+.btn_opt {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem;
+    width: 50%;
+    padding-left: 1rem;
+    border: var(--border);
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shadow);
+    color: black;
+    cursor: pointer;
+    font-size: 1.7rem;
+    background: white;
+}
+
+.btn_opt:hover {
+    background: var(--green);
+    color: #fff;
+}
+
+.img_change{
+    box-shadow: none !important;
+    width: 100px !important;
+    height: 100px !important;
+}
+
+
+.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+  }
+  
+  /* On mouse-over, add a deeper shadow */
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  
+  /* Add some padding inside the card container */
+  .container {
+    padding: 2px 16px;
+  }
+
+  .dlt{
+      background-color: #ff4d4d !important;
+      color: white !important;
+  }
